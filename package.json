@@ -1,0 +1,28 @@
+{
+  "name": "jirate",
+  "version": "1.0.0",
+  "description": "A Jira cli for creating git branches from issues, transitioning issues, and more",
+  "main": "cli/jirate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tandrewnichols/jirate.git"
+  },
+  "keywords": [
+    "jira",
+    "git",
+    "branch",
+    "issue"
+  ],
+  "author": {
+    "name": "Andrew Nichols",
+    "email": "tandrewnichols@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tandrewnichols/jirate/issues"
+  },
+  "homepage": "https://github.com/tandrewnichols/jirate#readme"
+}
