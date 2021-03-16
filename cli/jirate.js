@@ -35,7 +35,7 @@ program
   .action(init);
 
 program
-  .command('set <setting> <value>')
+  .command('set [setting] [value]')
   .description('Configure settings. See help for a list of settings and their explanations.')
   .option('autocacheCredentials <true|false>', 'Cache credentials for later use after they are manually entered.')
   .option('autocheckoutMaster <true|false|prompt>', `Automatically checkout master when ${ chalk.cyan('jira branch') } is run on a non-master branch.`)
