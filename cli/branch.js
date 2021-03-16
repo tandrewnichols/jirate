@@ -19,7 +19,7 @@ module.exports = async (options) => {
 
   try {
     jira.authenticate({ username, password });
-    const issues = await jira.findIssues();
+    const issues = await jira.findIssues(options.backlog);
     const { issue } = await prompt.chooseIssue(issues);
     const branchName = await prompt.createBranchName(issue);
     git.createBranch(branchName);

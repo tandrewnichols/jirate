@@ -22,6 +22,7 @@ program
   .option('-u, --username <username>', 'Jira username.')
   .option('-p, --password <password>', 'Jira password.')
   .option('-c, --credentials <file>', 'Local file in which Jira cedentials are stored as json.')
+  .option('-b, --backlog [count]', 'Include issues in the backlog')
   .description('Make a git branch from an issue.')
   .action(branch);
 
