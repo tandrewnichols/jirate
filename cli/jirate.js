@@ -31,6 +31,7 @@ program
   .option('-u, --username <username>', 'Jira username.')
   .option('-p, --password <password>', 'Jira password.')
   .option('-c, --credentials <file>', 'Local file in which Jira credentials are stored as json.')
+  .option('-f, --full', 'Prompt for configuration settings, rather than assuming the defaults. Note: this will be more involved.')
   .action(init);
 
 program
@@ -39,9 +40,10 @@ program
   .option('autocacheCredentials <true|false>', 'Cache credentials for later use after they are manually entered.')
   .option('autocheckoutMaster <true|false|prompt>', `Automatically checkout master when ${ chalk.cyan('jira branch') } is run on a non-master branch.`)
   .option('autoupdateMaster <true|false|prompt>', 'Automatically pull after checking out master before creating a new branch.')
-  .option('updateCommand <pull|merge|rebase>', 'Indicates how to resolve updates when switching to master. Pull runs "git pull" and relies on your local configuration. Merge and rebase both fetch first, and then run "git merge origin/master" and "git rebase origin/master" respectively.')
+  .option('updateCommand <pull|merge|rebase>', `Indicates how to resolve updates when switching to master. Pull runs ${ chalk.cyan('git pull') } and relies on your local configuration. Merge and rebase both fetch first, and then run ${ chalk.cyan('git merge origin/master') } and ${ chalk.cyan('git rebase origin/master') } respectively.`)
   .option('allowNonMasterBranching <true|false|prompt>', `Allow ${ chalk.cyan('jira branch') } to create branches off of non-master branches.`)
   .option('autoupdateIssue <true|false|prompt>', 'Automatically set the status and assignee of an issue when creating a branch for that issue.')
+  .option('filterOnLabels <label1,label2,...>', 'Only show issues tagged with particular labels.')
   .action(set);
 
 program
