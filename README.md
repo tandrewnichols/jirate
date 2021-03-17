@@ -81,7 +81,7 @@ Besides passing `-u`/`-p` or `-c`, you can also pass a credentials file path rig
 ```sh
 jira init ~/.jira-creds # Pass cred file directly
 jira init -c ~/.jira-creds # Pass cred file using -c option
-jira init -u bob.saget@oliveai.com -p fullhouse # Pass username and token separately
+jira init -u bob.saget@myorg.com -p fullhouse # Pass username and token separately
 jira init -c ~/.jira-creds -f # Run through the options and configure them based on your preference
 ```
 
